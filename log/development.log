@@ -1426,3 +1426,209 @@ ActionView::Template::Error (undefined method `errors' for nil:NilClass):
   
 app/views/articles/edit.html.erb:4:in `block in _app_views_articles_edit_html_erb___4103130282313760774_70355482293460'
 app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb___4103130282313760774_70355482293460'
+Started GET "/articles/new" for 127.0.0.1 at 2018-02-22 13:52:07 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.7ms)
+  Rendered articles/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+nd=( if @article.errors.any? );@output_buffer.safe_append='
+                              ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/articles/_form.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/articles/_form.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/_form.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/articles/_form.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/new.html.erb:3:in `_app_views_articles_new_html_erb__998783790375015959_70207066976260'
+Started GET "/" for 127.0.0.1 at 2018-02-22 13:52:19 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 207ms (Views: 204.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 13:52:22 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-02-22 13:52:26 -0600
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.7ms)
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+nd=( if @article.errors.any? );@output_buffer.safe_append='
+                              ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/articles/_form.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/articles/_form.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/_form.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/articles/_form.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/new.html.erb:3:in `_app_views_articles_new_html_erb__998783790375015959_70207046215000'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 13:52:28 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-02-22 13:52:29 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (223.1ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fb4b6935220>:0x00007fb4b6daeb58>
+Did you mean?  @article):
+     9: </p>
+    10: 
+    11: <%= link_to 'Back', articles_path %>
+    12: <%= link_to 'Edit', edit_article_path(article) %>
+  
+app/views/articles/show.html.erb:12:in `_app_views_articles_show_html_erb___1103017051216126382_70207069321880'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 13:52:31 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2018-02-22 13:52:32 -0600
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Edit Survey Post</h1>
+    2: <%= form_with(model: @article) do |form| %>
+    3: 
+    4:   <% if @article.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2>
+    7:         <%= pluralize(@article.errors.count, "error") %> prohibited
+  
+app/views/articles/edit.html.erb:4:in `block in _app_views_articles_edit_html_erb__1917421382012041318_70207081465860'
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb__1917421382012041318_70207081465860'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 13:52:34 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/2" for 127.0.0.1 at 2018-02-22 13:52:38 -0600
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QcU6/WKN36K0GGyy3jJ9xjj42pJMKAvWnhdsSUpQPESLOOKcbVHztsHJJEkJZ7eiYU/+ilLSrs3uBq1WVmnqFg==", "id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 13:52:38 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-02-22 13:52:41 -0600
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+nd=( if @article.errors.any? );@output_buffer.safe_append='
+                              ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/giovannicenteno/Documents/com331/com331_community/app/views/articles/_form.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/articles/_form.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/articles/_form.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/_form.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/articles/_form.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+app/views/articles/new.html.erb:3:in `_app_views_articles_new_html_erb__998783790375015959_70207070336140'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 13:52:43 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-22 13:52:53 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
