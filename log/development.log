@@ -1632,3 +1632,167 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-22 21:57:39 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 181ms (Views: 170.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 21:57:51 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 65ms (Views: 57.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2018-02-22 21:57:58 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (260.9ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007ffc98dbf258>:0x00007ffc98de6ec0>
+Did you mean?  @article):
+     9: </p>
+    10: 
+    11: <%= link_to 'Back', articles_path %>
+    12: <%= link_to 'Edit', edit_article_path(article) %>
+  
+app/views/articles/show.html.erb:12:in `_app_views_articles_show_html_erb__658692571076939275_70361436601620'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 21:58:15 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/3/edit" for 127.0.0.1 at 2018-02-22 21:58:21 -0600
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Edit Survey Post</h1>
+    2: <%= form_with(model: @article) do |form| %>
+    3: 
+    4:   <% if @article.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2>
+    7:         <%= pluralize(@article.errors.count, "error") %> prohibited
+  
+app/views/articles/edit.html.erb:4:in `block in _app_views_articles_edit_html_erb__1564215377876632057_70361436037840'
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb__1564215377876632057_70361436037840'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 21:58:25 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/3/edit" for 127.0.0.1 at 2018-02-22 21:58:26 -0600
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Edit Survey Post</h1>
+    2: <%= form_with(model: @article) do |form| %>
+    3: 
+    4:   <% if @article.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2>
+    7:         <%= pluralize(@article.errors.count, "error") %> prohibited
+  
+app/views/articles/edit.html.erb:4:in `block in _app_views_articles_edit_html_erb__1564215377876632057_70361399232520'
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb__1564215377876632057_70361399232520'
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 21:58:59 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2018-02-22 21:59:03 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (229.9ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007ffc98dbf258>:0x00007ffc94944f38>
+Did you mean?  @article):
+     9: </p>
+    10: 
+    11: <%= link_to 'Back', articles_path %>
+    12: <%= link_to 'Edit', edit_article_path(article) %>
+  
+app/views/articles/show.html.erb:12:in `_app_views_articles_show_html_erb__658692571076939275_70361400616160'
+Started GET "/articles/1" for 127.0.0.1 at 2018-02-22 21:59:17 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=1):
+  
+app/controllers/articles_controller.rb:8:in `show'
+Started GET "/articles/2" for 127.0.0.1 at 2018-02-22 21:59:23 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=2):
+  
+app/controllers/articles_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2018-02-22 22:03:33 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-02-22 22:03:34 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2018-02-22 22:03:36 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.1ms)
+
+
